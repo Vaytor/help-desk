@@ -59,6 +59,9 @@
 
                 <? } ?>
 
+                <?if(isset($_GET['login']) && $_GET['login'] == "errorautenticacao"){ ?>
+                    <script>alert("É preciso realizar login para acessar essa página!");</script>
+                <? } ?>
               </form>
             </div>
           </div>
