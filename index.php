@@ -40,6 +40,14 @@
                   <input name="senha" type="password" class="form-control" placeholder="Senha">
                 </div>
                 <button class="btn btn-lg btn-info btn-block" type="submit">Entrar</button>
+
+                <?php if(isset($_GET['login']) && $_GET['login'] == "invalido"){ ?>                
+
+                    <div class="text-danger">
+                        Usuário e/ou senha inválido(s)
+                    </div>
+
+                <?php } ?>
               </form>
             </div>
           </div>
