@@ -1,3 +1,13 @@
+<?php 
+    //Iniciando sessão
+    session_start();
+    
+    //Verificando se o usuário foi autenticado, caso tenha, enviar para a home
+    if($_SESSION['autenticacao']){
+      header("Location: pages/home.php");
+    }
+    
+?>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -41,13 +51,14 @@
                 </div>
                 <button class="btn btn-lg btn-info btn-block" type="submit">Entrar</button>
 
-                <?php if(isset($_GET['login']) && $_GET['login'] == "invalido"){ ?>                
+                <? if(isset($_GET['login']) && $_GET['login'] == "invalido"){ ?>                
 
                     <div class="text-danger">
                         Usuário e/ou senha inválido(s)
                     </div>
 
-                <?php } ?>
+                <? } ?>
+
               </form>
             </div>
           </div>

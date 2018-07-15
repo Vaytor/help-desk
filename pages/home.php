@@ -1,3 +1,13 @@
+<?php 
+    //Iniciando sessão
+    session_start();
+
+    //Verificando se o usuário foi autenticado para não deixar o usuário acessar diretamente a página
+    if(!$_SESSION['autenticacao']){
+      header("Location: ../index.php?login=errorautenticacao");
+    }
+    
+?>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -18,9 +28,10 @@
 
     <nav class="navbar navbar-dark bg-dark">
       <a class="navbar-brand" href="#">
-        <img src="logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        <img src="../img/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
         App Help Desk
       </a>
+      <a href="../action/sair.php" style="text-align: left; color: red" >SAIR</a>
     </nav>
 
     <div class="container">    
@@ -34,10 +45,10 @@
             <div class="card-body">
               <div class="row">
                 <div class="col-6 d-flex justify-content-center">
-                  <img src="formulario_abrir_chamado.png" width="70" height="70">
+                  <img src="../img/formulario_abrir_chamado.png" width="70" height="70">
                 </div>
                 <div class="col-6 d-flex justify-content-center">
-                  <img src="formulario_consultar_chamado.png" width="70" height="70">
+                  <img src="../img/formulario_consultar_chamado.png" width="70" height="70">
                 </div>
               </div>
             </div>
