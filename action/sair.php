@@ -2,8 +2,8 @@
     //Iniciando sessão
     session_start();
 
-    //Colocando false para a autenticação
-    $_SESSION['autenticacao'] = FALSE;
+    //Destruindo as váriaveis de sessão
+    session_destroy();
 
     //Enviando para a tela de login
     header("Location: ../index.php");

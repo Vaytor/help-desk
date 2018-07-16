@@ -3,13 +3,9 @@
     session_start();
   
     //Verificando se o usuário foi autenticado, caso tenha, enviar para a home    
-    if($_SESSION['autenticacao']){
+    if(isset($_SESSION['autenticacao'])){
       header("Location: pages/home.php");
     }
-    
-    //Carregando a barra de navegação
-    //require_once("pages/header.php");
-
 
 ?>
 <html>
