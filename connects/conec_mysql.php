@@ -18,8 +18,11 @@ class db{
         //Verificando se ocorreu erro ao criar a conexão
         if(!$con){
             die("Erro ao se conectar ao banco de dados".mysqli_error());
+        }else{
+            mysqli_set_charset('utf8_unicode_ci');
         }
 
+        //Retornando a conexão
         return $con;
 
     }
