@@ -16,8 +16,10 @@
         App Help Desk
       </a>
 
-      <? if($_SESSION['autenticacao']){ #Se o usuário estiver autenticado, mostra o botão "sair"?>
-        <a href="../action/sair.php" style="text-align: left; color: red" >SAIR</a>
-      <? } ?>
+      <ul class="navbar-nav" >
+        <li class="nav-item">
+          <a href="../action/sair.php" style="color: red" class="nav-link">SAIR</a>
+        </li>
+      </ul>
       
     </nav>

@@ -1,17 +1,40 @@
 <?php 
     //Iniciando sessão
     session_start();
-    
-    //Verificando se o usuário foi autenticado, caso tenha, enviar para a home
+  
+    //Verificando se o usuário foi autenticado, caso tenha, enviar para a home    
     if($_SESSION['autenticacao']){
       header("Location: pages/home.php");
     }
     
     //Carregando a barra de navegação
-    require_once("pages/nav.php");
+    //require_once("pages/header.php");
+
 
 ?>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>App Help Desk</title>
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="http://127.0.0.1/help_desk/css/style.css"></link>
+    
+    <?if(isset($_GET['login']) && $_GET['login'] == "errorautenticacao"){ ?>
+      <script>alert("É preciso realizar login para acessar essa página!");</script>
+    <? } ?>
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">
+        <img src="http://127.0.0.1/help_desk/img/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        App Help Desk
+      </a>
+      
+    </nav>
     <div class="container">    
       <div class="row">
 
@@ -38,9 +61,7 @@
 
                 <? } ?>
 
-                <?if(isset($_GET['login']) && $_GET['login'] == "errorautenticacao"){ ?>
-                    <script>alert("É preciso realizar login para acessar essa página!");</script>
-                <? } ?>
+                
               </form>
             </div>
           </div>

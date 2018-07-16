@@ -33,12 +33,10 @@
         if($dados == NULL){
             //Se for invalido, é enviado por GET login=invalido, para então ser recuperado na pagina index
             header("Location: ../index.php?login=invalido");
-            $_SESSION['autenticacao'] = FALSE;
         }else{
             //print_r($dados);
             $_SESSION['autenticacao'] = TRUE;
             header("Location: ../pages/home.php");
-
         }
 
     }
