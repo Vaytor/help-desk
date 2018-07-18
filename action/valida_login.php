@@ -32,7 +32,7 @@
         //Verificando se usuário ou senha são válidos e autenticanto, ou não, o usuário
         if($dados == NULL){
             //Se for invalido, é enviado por GET login=invalido, para então ser recuperado na pagina index
-            header("Location: ../index.php?login=invalido");
+            header("Location: ../index.php?invalido");
         }else{
 
             //print_r($dados);

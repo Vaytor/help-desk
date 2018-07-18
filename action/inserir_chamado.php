@@ -6,7 +6,7 @@
     //Conexão com o banco de dados
     require_once('../connects/conec_mysql.php');
 
-    //Criando objeto de conexão
+    //Criando objeto de conexão (db é o nome da classe)
     $obj_db = new db();
 
     //Realizando a conexão

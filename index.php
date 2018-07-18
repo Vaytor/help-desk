@@ -15,9 +15,9 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="http://127.0.0.1/help_desk/css/style.css"></link>
+    <link rel="stylesheet" href="css/style.css"></link>
     
-    <?if(isset($_GET['login']) && $_GET['login'] == "errorautenticacao"){ ?>
+    <?if(isset($_GET['errorautenticacao'])){ ?>
       <script>alert("É preciso realizar login para acessar essa página!");</script>
     <? } ?>
   </head>
@@ -26,7 +26,7 @@
 
     <nav class="navbar navbar-dark bg-dark">
       <a class="navbar-brand" href="#">
-        <img src="http://127.0.0.1/help_desk/img/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        <img src="img/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
         App Help Desk
       </a>
       
@@ -42,14 +42,14 @@
             <div class="card-body">
               <form action="./action/valida_login.php" method="POST">
                 <div class="form-group">
-                  <input name="email" type="email" class="form-control" placeholder="E-mail">
+                  <input autocomplete="off" name="email" type="email" class="form-control" placeholder="E-mail">
                 </div>
                 <div class="form-group">
                   <input name="senha" type="password" class="form-control" placeholder="Senha">
                 </div>
                 <button class="btn btn-lg btn-info btn-block" type="submit">Entrar</button>
 
-                <? if(isset($_GET['login']) && $_GET['login'] == "invalido"){ ?>                
+                <? if(isset($_GET['invalido'])){ ?>                
 
                     <div class="text-danger">
                         Usuário e/ou senha inválido(s)

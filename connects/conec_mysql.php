@@ -2,11 +2,11 @@
 
 class db{
     //Definindo dados de conexão
-    private $server = "localhost";
+    private $server = "127.0.0.1";
     
     private $user = "root"; 
     
-    private $senha = "";
+    private $senha = "root";
     
     private $database = "help_desk";
 

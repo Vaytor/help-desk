@@ -12,12 +12,12 @@
     $user_id = $_SESSION['user_id'];
 
     //Query para listar chamado referente ao usuário
-    $query = "select titulo, categoria, descricao from chamados where user_id = $user_id";
+    $query = "select id, titulo, categoria, descricao from chamados where user_id = $user_id";
     
     //Realizando o select da query
     $result = $mysqli->query($query);
     
-    //Verificando que a query foi executada com sucesso/se retornou dados
+    //Verificando se retornou dados
     if(!$result){
         ?>
         <div class="card mb-3 bg-light">
@@ -31,23 +31,7 @@
         //Percorrendo os resultados e atribuindo aos campos
         while ($dados = mysqli_fetch_row($result))
         {
-        ?>
-            <div class="card mb-3 bg-light">
-              <div class="card-body">
-                <h5 class="card-title"><? echo $dados[0]; ?></h5>
-                <h6 class="card-subtitle mb-2 text-muted"><? echo $dados[1]; ?></h6>
-                <p class="card-text"><? echo $dados[2]; ?></p>
-                <div class="text-right">
-                    <a href="./editar_chamado.php">
-                        <img src="../img/editar.ico" width="30" height="30">
-                    </a>
-                    <a href="./deletar_chamado.php">
-                        <img src="../img/deletar.ico" width="50" height="50">
-                    </a>
-                </div>
-              </div>
-            </div>
-        <?php
+            require('../pages/view/consultar_chamado_body.html');
         }
 
        
