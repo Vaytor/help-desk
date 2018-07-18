@@ -1,0 +1,7 @@
+# IGNORADO #
+###################
+
+*.sql
+*.md
+
+conec_mysql.php
