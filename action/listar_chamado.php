@@ -37,6 +37,14 @@
                 <h5 class="card-title"><? echo $dados[0]; ?></h5>
                 <h6 class="card-subtitle mb-2 text-muted"><? echo $dados[1]; ?></h6>
                 <p class="card-text"><? echo $dados[2]; ?></p>
+                <div class="text-right">
+                    <a href="./editar_chamado.php">
+                        <img src="../img/editar.ico" width="30" height="30">
+                    </a>
+                    <a href="./deletar_chamado.php">
+                        <img src="../img/deletar.ico" width="50" height="50">
+                    </a>
+                </div>
               </div>
             </div>
         <?php
