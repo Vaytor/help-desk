@@ -6,7 +6,7 @@ class db{
     
     private $user = "root"; 
     
-    private $senha = "root";
+    private $senha = "";
     
     private $database = "help_desk";
 
