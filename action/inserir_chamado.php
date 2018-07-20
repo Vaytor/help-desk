@@ -27,10 +27,11 @@
     //Realizado o insert no banco (result recebe a conexão que executa a query pela função "query")
     $result = $mysqli->query($query);
 
-    //Verificando que a query foi executada com sucesso
+    //Verificando se ocorreu algum erro 
     if(!$result){
         die("Erro: ".$mysqli->error);
     }else{
+        //Enviando para a home
         header("Location: ../pages/home.php?query=sucesso");
     }
     
