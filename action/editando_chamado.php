@@ -16,13 +16,13 @@ $mysqli = $obj_db->conec_mysql();
 $user_id = $_SESSION['user_id'];
 
 //Reperando o id do chamado para edição
-//$chamado_id = $_GET['chamado'];
+$chamado_id = $_GET['chamado'];
 
 //Recuperando o valor da descricao para alterar
 $descricao = $_POST['descricao'];
 
 //Query para a edição do chamado
-$query = "update chamados set descricao = '$descricao' where id = 23 and user_id = $user_id";
+$query = "update chamados set descricao = '$descricao' where id = $chamado_id and user_id = $user_id";
 
 //Executando a query
 $result = $mysqli->query($query);
