@@ -4,5 +4,5 @@
 *.sql
 *.md
 
-conec_mysql.php
-jquery.js
+connects/conec_mysql.php
+script/jquery.js
