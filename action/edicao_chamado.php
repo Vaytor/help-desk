@@ -24,13 +24,9 @@
     //Realizando o select da query
     $result = $mysqli->query($query);
     
-    //Verificando se retornou dados
+    //Verificando se ocorreu algum erro
     if(!$result){
-        ?>
-        <div class="card mb-3 bg-light">
-            <span>Erro ao acessar o banco de dados</span>
-        </div>
-        <?php
+        die("Erro: ".$mysqli->error);
     }else{
         
         //Percorrendo os resultados e atribuindo aos campos

@@ -24,7 +24,7 @@ $result = $mysqli->query($query);
 
 //Verificando se retornou dados
 if(!$result){
-    echo "error";
+    die("Erro: ".$mysqli->error);
 }else{
     //Percorrendo os resultados e atribuindo aos campos
     while ($dados = mysqli_fetch_row($result))

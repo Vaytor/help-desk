@@ -27,9 +27,11 @@ $query = "update chamados set descricao = '$descricao' where id = 23 and user_id
 //Executando a query
 $result = $mysqli->query($query);
 
+//Verificando se ocorreu algum erro
 if(!$result){
     die("Erro: ".$mysqli->error);
 }else{
+    //Caso seja sucesso, redirecionar para a lista de chamados
     header("Location: ../pages/consultar_chamado.php?editado");
 }
 

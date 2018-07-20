@@ -17,24 +17,28 @@
     //Realizando o select da query
     $result = $mysqli->query($query);
     
-    //Verificando se retornou dados
+    //Verificando se ocorreu algum erro
     if(!$result){
+
+        die("Erro: ".$mysqli->error);
+
+        //Verificando se retornou dados
+    }else if($result == NULL){
+        
         ?>
         <div class="card mb-3 bg-light">
             <span>Você não possui chamados abertos</span>
         </div>
         <?php
-    }else{
-        
         //print_r($dados);
         
         //Percorrendo os resultados e atribuindo aos campos
-        while ($dados = mysqli_fetch_row($result))
-        {
+        }else{
+
+            while ($dados = mysqli_fetch_row($result)){
+
             require('../pages/view/consultar_chamado_body.html');
         }
-
-       
 
     }
 

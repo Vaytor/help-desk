@@ -29,7 +29,7 @@
 
     //Verificando que a query foi executada com sucesso
     if(!$result){
-        die("Erro ao inserir no banco de dados: <br/>".$mysqli->error);
+        die("Erro: ".$mysqli->error);
     }else{
         header("Location: ../pages/home.php?query=sucesso");
     }

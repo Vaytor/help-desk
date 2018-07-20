@@ -24,8 +24,9 @@
 
     //Verificando se ocorreu algum erro na consulta
     if (!$result) {
-        die("Erro ao realizar consulta no banco de dados: <br/>".$mysqli->error);
+        die("Erro: ".$mysqli->error);
     }else{
+        
         //Recuperando dados da consulta
         $dados = mysqli_fetch_assoc($result);
 
