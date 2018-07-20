@@ -12,7 +12,7 @@
     //Carregando a view (html) do consultar chamado footer
     require_once("view/consultar_chamado_footer.html");
 
-    
-
-
+    if(isset($_GET['editado'])){
+        echo "<script>alert('Chamado editado com sucesso!');</script>";
+    }
     
