@@ -1,15 +1,15 @@
 <div class="chamados card mb-3 bg-light" id="<? echo $dados[0]; ?>">
-        <div class="card-body">
-          <h5 class="card-title"><? echo $dados[1]; ?></h5>
-          <h6 class="card-subtitle mb-2 text-muted"><? echo $dados[2]; ?></h6>
-          <p class="card-text"><? echo $dados[3]; ?></p>
-          <div class="text-right" >
-              <a class="edit" onclick="getId()">
-                  <img src="../img/editar.ico" width="30" height="30">
-              </a>
-              <a href="../action/deletar_chamado.php">
-                  <img src="../img/deletar.ico" width="50" height="50">
-              </a>
+    <div class="card-body">
+        <h5 class="card-title"><? echo $dados[1]; ?></h5>
+        <h6 class="card-subtitle mb-2 text-muted"><? echo $dados[2]; ?></h6>
+        <p class="card-text"><? echo $dados[3]; ?></p>
+        <div class="text-right" >
+            <a class="edit" href="#">
+                <img src="../img/editar.ico" width="30" height="30">
+            </a>
+            <a class="deletar">
+                <img src="../img/deletar.ico" width="50" height="50">
+            </a>
         </div>
     </div>
 </div>

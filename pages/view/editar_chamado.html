@@ -1,0 +1,48 @@
+<div class="container">    
+    <div class="row">
+
+      <div class="card-abrir-chamado">
+        <div class="card">
+          <div class="card-header">
+            Edição do chamado
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col">
+                
+                <form method="POST" action="../action/inserir_chamado.php">
+                  <div class="form-group">
+                    <label>Título</label>
+                    <input name="titulo" type="text" class="form-control" placeholder="Título" readonly value="<? echo $dados[0]; ?>">
+                  </div>
+                  
+                  <div class="form-group">
+                    <label>Categoria</label>
+                    <input name="categoria" type="text" class="form-control" placeholder="Categoria" readonly value="<? echo $dados[1]; ?>">    
+                    </select>
+                  </div>
+                  
+                  <div class="form-group">
+                    <label>Descrição</label>
+                    <textarea name="descricao" class="form-control" rows="3"><? echo $dados[2]; ?></textarea>
+                  </div>
+
+                  <div class="row mt-5">
+                    <div class="col-6">
+                      <button class="btn btn-lg btn-warning btn-block" type="submit">Voltar</button>
+                    </div>
+
+                    <div class="col-6">
+                      <button class="btn btn-lg btn-info btn-block" type="submit">Editar</button>
+                    </div>
+                  </div>
+                </form>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</body>
+</html>
