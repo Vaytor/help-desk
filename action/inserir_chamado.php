@@ -33,6 +33,9 @@
     }else{
         header("Location: ../pages/home.php?query=sucesso");
     }
+    
+    //Limpando a query
+    mysqli_free_result($result);
 
     //Fechando a conexão
     $mysqli->close();

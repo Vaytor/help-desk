@@ -38,5 +38,8 @@
 
     }
 
+    //Limpando a query
+    mysqli_free_result($result);
+
     //Fechando a conexão
     $mysqli->close();
