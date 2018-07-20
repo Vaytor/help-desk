@@ -19,7 +19,7 @@
     $chamado_id = $_GET['chamado'];
 
     //Query para listar chamado referente ao usuário
-    $query = "select titulo, categoria, descricao from chamados where user_id = $user_id and id = $chamado_id";
+    $query = "select id, titulo, categoria, descricao from chamados where user_id = $user_id and id = $chamado_id";
     
     //Realizando o select da query
     $result = $mysqli->query($query);
@@ -28,7 +28,7 @@
     if(!$result){
         ?>
         <div class="card mb-3 bg-light">
-            <span>ERRO</span>
+            <span>Erro ao acessar o banco de dados</span>
         </div>
         <?php
     }else{
