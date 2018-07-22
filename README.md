@@ -17,7 +17,7 @@ O sistema irá possui dois tipos de usuários, um comum e um administrador
 
 ** Usuários Administrador **
 
-* Lista de usuários X
+* Lista de usuários V
 * Lista de todos os chamados X
 * Lista de todos os chamados ainda não respondidos X
 * Lista de todos os chamados finalizados X
