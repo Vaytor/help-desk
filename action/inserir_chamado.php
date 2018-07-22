@@ -31,8 +31,22 @@
     if(!$result){
         die("Erro: ".$mysqli->error);
     }else{
-        //Enviando para a home
-        header("Location: ../pages/home.php?query=sucesso");
+
+        //A cada chamado criado adicionar mais um a quantidade de chamados criados pelo usuário  
+        $query = "update usuarios set qtd_chamados = qtd_chamados + 1 where id = $user_id";
+
+        //Realizado o update no banco
+        $result = $mysqli->query($query);
+
+        //Verificando se ocorreu algum erro
+        if(!$result){
+            die("Erro: ".$mysqli->error);
+        }else{
+            //Enviando para a home
+            header("Location: ../pages/home.php?query=sucesso");
+        }
+
+        
     }
     
     //Limpando a query

@@ -1,8 +1,5 @@
 <?php 
 
-    //Iniciando a sessão
-    session_start();
-
     //Fazendo um require da conexão
     require_once("../connects/conec_mysql.php");
 
@@ -17,7 +14,7 @@
     $senha = $_POST["senha"];
 
     //Query para verificar se email ou senha são validos
-    $query = "SELECT id FROM usuarios WHERE email = '$email' and senha = '$senha' ";
+    $query = "SELECT id, perfil FROM usuarios WHERE email = '$email' and senha = '$senha' ";
     
     //Executando a query (result recebe a conexão que executa a query pela função "query")
     $result = $mysqli->query($query);
@@ -36,6 +33,9 @@
             header("Location: ../index.php?invalido");
         }else{
 
+            //Iniciando a sessão
+            session_start();
+
             //print_r($dados);
             //Autenticando usuário
             $_SESSION['autenticacao'] = TRUE;
@@ -43,6 +43,9 @@
             //Recuperando o id do usuário
             $_SESSION['user_id'] = $dados['id'];
             
+            //Recuperando o perfil
+            $_SESSION['perfil'] = $dados['perfil'];
+
             //print_r($_SESSION['user_id']);
             //Enviando para home page  
             header("Location: ../pages/home.php");
