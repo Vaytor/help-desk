@@ -13,3 +13,5 @@ Existe os seguintes requisitos:
 * Cadastro de novos usuários X
 * Finalizar chamados (Apenas para adms) X
 * Editar chamados (apenas a descrição) X
+* Opção de finalizar chamado V
+* Responder chamados criado (Apenas para adms) X
