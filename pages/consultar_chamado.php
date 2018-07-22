@@ -14,5 +14,7 @@
 
     if(isset($_GET['editado'])){
         echo "<script>alert('Chamado editado com sucesso!');</script>";
+    }elseif(isset($_GET['finalizado'])){
+        echo "<script>alert('Chamado finalizado com sucesso!');</script>";
     }
     
