@@ -4,14 +4,23 @@ Um helpdesk usando PHP
 
 Existe os seguintes requisitos:
 
+O sistema irá possui dois tipos de usuários, um comum e um administrador
+
+** Usuários Comum **
+
 * Login e senha para usuário acessar os chamados e cadastrar novos V
 * Cadastro de chamado onde possui um titulo, categoria e uma descrição V
-* Listagem de chamado V
-* Controle de usuário X
-* Lista de usuários (Apenas para adms) X
-* Lista de todos os chamados criados (Apenas para adms) X
+* Listagem de chamado craidos pelo usuários V
+* Finalizar chamados V
+* Responder chamados criados X
 * Cadastro de novos usuários X
-* Finalizar chamados (Apenas para adms) X
-* Editar chamados (apenas a descrição) X
-* Opção de finalizar chamado V
-* Responder chamados criado (Apenas para adms) X
+
+** Usuários Administrador **
+
+* Lista de usuários X
+* Lista de todos os chamados X
+* Lista de todos os chamados ainda não respondidos X
+* Lista de todos os chamados finalizados X
+* Lista de todos os chamados aguardando retorno do cliente X
+* Finalizar chamados X
+* Responder chamados criados X
