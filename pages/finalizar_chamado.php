@@ -1,7 +1,7 @@
 <?php
 
 //View do header
-require_once("view/header.html");
+require_once("header.php");
 
 //Verificação para não deixar acessar páginas que não pertence a aquele user  
 if($_SESSION['perfil'] == "admin"){
