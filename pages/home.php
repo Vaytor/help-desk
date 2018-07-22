@@ -22,7 +22,9 @@
 
     //Confirmando com o usuário que o chamado foi criado
     if(isset($_GET['query']) && $_GET['query'] == "sucesso"){
+        
         echo "<script>alert('Chamado criado com sucesso!');</script>";
+        
     }
 
 ?>

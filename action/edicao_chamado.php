@@ -30,9 +30,10 @@
     }else{
         
         //Percorrendo os resultados e atribuindo aos campos
-        while ($dados = mysqli_fetch_row($result))
-        {
+        while ($dados = mysqli_fetch_row($result)){
+            
             require('../pages/view/editar_chamado.html');
+            
         }
 
        
