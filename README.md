@@ -13,7 +13,8 @@ O sistema irá possui dois tipos de usuários, um comum e um administrador
 * Listagem de chamado craidos pelo usuários V
 * Finalizar chamados V
 * Responder chamados criados X
-* Cadastro de novos usuários X
+* Cadastro de novos usuários V
+* Ao criar um conta enviar um email de verificação para o usuários
 
 ** Usuários Administrador **
 
