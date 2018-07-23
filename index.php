@@ -7,6 +7,9 @@
       header("Location: pages/home.php");
     }
 
+    if(isset($_GET['conta_criada'])){
+      echo "<script>alert('Um email foi enviado para sua conta para ativar o cadastro!');</script>";
+    }
 ?>
 <html>
   <head>
@@ -39,15 +42,24 @@
             <div class="card-header">
               Login
             </div>
+            
             <div class="card-body">
+              
               <form action="./action/valida_login.php" method="POST">
+                
                 <div class="form-group">
                   <input autocomplete="off" name="email" type="email" class="form-control" placeholder="E-mail">
                 </div>
                 <div class="form-group">
                   <input name="senha" type="password" class="form-control" placeholder="Senha">
                 </div>
+                
                 <button class="btn btn-lg btn-info btn-block" type="submit">Entrar</button>
+
+                <div style="margin-top: 2%">
+                  <a href="./pages/tela_cadastro.php" class="badge badge-outline-info" title="Cadastra-se">Cadastre-se</a>                
+                  <a href="#" class="badge badge-outline-info" title="Esqueceu sua senha?" style="float: right">Esqueci minha senha</a>
+                </div>
 
                 <? if(isset($_GET['invalido'])){ ?>                
 
@@ -56,7 +68,7 @@
                     </div>
 
                 <? } ?>
-
+                
                 
               </form>
             </div>
