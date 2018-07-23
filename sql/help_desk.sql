@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 16-Jul-2018 às 23:00
+-- Generation Time: 23-Jul-2018 às 03:16
 -- Versão do servidor: 10.1.33-MariaDB
 -- PHP Version: 7.2.6
 
@@ -41,18 +41,10 @@ CREATE TABLE `chamados` (
 --
 
 INSERT INTO `chamados` (`id`, `user_id`, `titulo`, `categoria`, `descricao`) VALUES
-(1, 1, 'não liga!', 'Hardware', 'Meu pc não está ligando!'),
-(2, 1, 'Teste', 'Hardware', 'dasdad'),
-(3, 1, 'Victor', 'CriaÃ§Ã£o UsuÃ¡rio', 'aÃ¡Ã¡dsÃ¡sdÂ´nÃ£Ã§'),
-(4, 1, 'NÃ£o liga!', 'Hardware', 'Ã§][aÃ¡'),
-(5, 1, 'NÃ£o liga!', 'Impressora', 'qweqweÂ´qÃ£Ã§'),
-(6, 1, 'NÃ£o liga!', 'Software', 'Ã§]qeÂ´qÃ¡'),
-(7, 1, 'NÃ£o liga!', 'Impressora', 'wqew\r\n'),
-(8, 1, '', 'CriaÃ§Ã£o UsuÃ¡rio', ''),
-(9, 2, 'Ação', 'Hardware', 'ação'),
-(10, 1, 'NÃ£o liga!', 'Impressora', 'aÃ§Ã£p'),
-(11, 1, 'NÃ£o liga!', 'CriaÃ§Ã£o UsuÃ¡rio', 'aÃ§Ã£o'),
-(12, 1, 'NÃ£o liga!', 'CriaÃ§Ã£o UsuÃ¡rio', 'saaÃ§Ã£o');
+(20, 1, 'NÃ£o liga!', 'Hardware', 'NÃ£o funciona mais, apÃ³s troca do dia 04/07'),
+(21, 2, 'NÃ£o liga!', 'Impressora', 'Funcina mais nÃ£o'),
+(23, 1, 'Teste2', 'Software', 'NÃ£o funciona'),
+(24, 2, 'Teste2', 'Impressora', 'Tentando pela perdi as contas');
 
 -- --------------------------------------------------------
 
@@ -65,16 +57,19 @@ CREATE TABLE `usuarios` (
   `nome` varchar(255) CHARACTER SET utf8 NOT NULL,
   `email` varchar(255) CHARACTER SET utf8 NOT NULL,
   `senha` varchar(255) CHARACTER SET utf8 NOT NULL,
-  `ativo` tinyint(1) NOT NULL DEFAULT '0'
+  `ativo` tinyint(1) NOT NULL DEFAULT '0',
+  `perfil` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
+  `qtd_chamados` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Extraindo dados da tabela `usuarios`
 --
 
-INSERT INTO `usuarios` (`id`, `nome`, `email`, `senha`, `ativo`) VALUES
-(1, 'Victor', 'victor@gmail.com', '123456', 0),
-(2, 'Mária', 'maria@gmail.com', '1234', 0);
+INSERT INTO `usuarios` (`id`, `nome`, `email`, `senha`, `ativo`, `perfil`, `qtd_chamados`) VALUES
+(1, 'Victor', 'victor@gmail.com', '123456', 1, 'admin', 0),
+(2, 'Mária', 'maria@gmail.com', '1234', 1, 'user', 3),
+(6, '', '', '', 0, 'user', 0);
 
 --
 -- Indexes for dumped tables
@@ -101,13 +96,13 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT for table `chamados`
 --
 ALTER TABLE `chamados`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT for table `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Constraints for dumped tables
