@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 23-Jul-2018 às 03:16
+-- Generation Time: 24-Jul-2018 às 03:35
 -- Versão do servidor: 10.1.33-MariaDB
 -- PHP Version: 7.2.6
 
@@ -42,8 +42,28 @@ CREATE TABLE `chamados` (
 
 INSERT INTO `chamados` (`id`, `user_id`, `titulo`, `categoria`, `descricao`) VALUES
 (20, 1, 'NÃ£o liga!', 'Hardware', 'NÃ£o funciona mais, apÃ³s troca do dia 04/07'),
-(21, 2, 'NÃ£o liga!', 'Impressora', 'Funcina mais nÃ£o'),
-(23, 1, 'Teste2', 'Software', 'NÃ£o funciona'),
+(21, 2, 'NÃ£o liga!', 'Impressora', 'Funcionou!'),
+(23, 1, 'Teste2', 'Software', 'NÃ£o funciona');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `chamados_finalizados`
+--
+
+CREATE TABLE `chamados_finalizados` (
+  `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `titulo` varchar(60) COLLATE utf8_unicode_ci NOT NULL,
+  `categoria` varchar(60) COLLATE utf8_unicode_ci NOT NULL,
+  `descricao` mediumtext COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Extraindo dados da tabela `chamados_finalizados`
+--
+
+INSERT INTO `chamados_finalizados` (`id`, `user_id`, `titulo`, `categoria`, `descricao`) VALUES
 (24, 2, 'Teste2', 'Impressora', 'Tentando pela perdi as contas');
 
 -- --------------------------------------------------------
@@ -68,8 +88,7 @@ CREATE TABLE `usuarios` (
 
 INSERT INTO `usuarios` (`id`, `nome`, `email`, `senha`, `ativo`, `perfil`, `qtd_chamados`) VALUES
 (1, 'Victor', 'victor@gmail.com', '123456', 1, 'admin', 0),
-(2, 'Mária', 'maria@gmail.com', '1234', 1, 'user', 3),
-(6, '', '', '', 0, 'user', 0);
+(2, 'Mária', 'maria@gmail.com', '1234', 1, 'user', 5);
 
 --
 -- Indexes for dumped tables
@@ -96,7 +115,7 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT for table `chamados`
 --
 ALTER TABLE `chamados`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT for table `usuarios`
