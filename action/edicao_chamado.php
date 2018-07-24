@@ -1,8 +1,5 @@
 <?php
 
-    //Inciando a sessão
-    session_start();
-
     //Conexão com o banco de dados
     require_once('../connects/conec_mysql.php');
 
@@ -32,7 +29,7 @@
         //Percorrendo os resultados e atribuindo aos campos
         while ($dados = mysqli_fetch_row($result)){
             
-            require('../pages/view/editar_chamado.html');
+            require('../pages/view/user/editar_chamado.html');
             
         }
 

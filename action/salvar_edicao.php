@@ -29,7 +29,7 @@ if(!$result){
     //Percorrendo os resultados e atribuindo aos campos
     while ($dados = mysqli_fetch_row($result))
     {
-        require_once('../pages/view/consultar_chamado_body.html');
+        require_once('../pages/view/user/consultar_chamado_body.html');
     }
     
 }

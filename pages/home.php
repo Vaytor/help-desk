@@ -9,12 +9,12 @@
     if($_SESSION['perfil'] == "admin"){
         
         //Carregando a view home para usuários administradores
-        require_once("view/home_admin.html");
+        require_once("view/admin/home_admin.html");
 
     }else{
         
         //Carregando a view home para usuários normais
-        require_once("view/home.html");
+        require_once("view/user/home.html");
 
     }
     

@@ -25,7 +25,7 @@
     //Percorrendo os resultados e atribuindo aos campos
     while ($dados = mysqli_fetch_row($result)){
         
-        require('../pages/view/lista_usuarios.html');
+        require('../pages/view/admin/lista_usuarios.html');
 
     }
      

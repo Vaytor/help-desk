@@ -1,4 +1,5 @@
 <?php
+    
     //Conexão com o banco de dados
     require_once('../connects/conec_mysql.php');
 
@@ -8,11 +9,8 @@
     //Realizando a conexão
     $mysqli = $obj_db->conec_mysql();
 
-    //Recuperando a váriavel de sessão que recebe o id do usuário ao realizar login
-    $user_id = $_SESSION['user_id'];
-
     //Query para listar chamado referente ao usuário
-    $query = "select id, titulo, categoria, descricao from chamados where user_id = $user_id";
+    $query = "select id, titulo, categoria, descricao from chamados";
     
     //Realizando o select da query
     $result = $mysqli->query($query);
@@ -23,7 +21,7 @@
         die("Erro: ".$mysqli->error);
 
         //Verificando se retornou dados
-    }else if(mysqli_num_rows($result) == 0){
+    }else if($result == NULL){
         
         ?>
         <div class="card mb-3 bg-light">

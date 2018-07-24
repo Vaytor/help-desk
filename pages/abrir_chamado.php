@@ -11,7 +11,7 @@
     }else{
         
         //Carregando a view de abrir chamado
-        require_once("view/abrir_chamado.html");
+        require_once("view/user/abrir_chamado.html");
     }
     
    
