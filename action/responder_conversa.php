@@ -32,6 +32,6 @@ if(!$result){
     die("Erro: ".$mysqli->error);
 }else{
     //Caso seja sucesso, redirecionar para a lista de chamados
-    header("Location: ../pages/consultar_chamado.php?editado");
+    header("Location: ../pages/consultar_chamado.php");
 }
 

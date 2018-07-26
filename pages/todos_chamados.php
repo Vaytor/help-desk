@@ -6,13 +6,13 @@ require_once("header.php");
 if($_SESSION["perfil"] == "admin"){
     
     //Carregando a view (html) do consultar chamado header
-    require_once("view/user/consultar_chamado_header.html");
+    require_once("view/admin/lista_conversa_header.html");
 
     //Carregando a lista de chamados
     require_once('../action/listar_todos_chamados.php');
 
     //Carregando a view (html) do consultar chamado footer
-    require_once("view/user/consultar_chamado_footer.html");
+    require_once("view/admin/lista_conversa_footer.html");
 
 
 }else{

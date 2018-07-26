@@ -35,7 +35,8 @@
 
             while ($dados = mysqli_fetch_row($result)){
 
-            require('../pages/view/user/consultar_chamado_body.html');
+            require('../pages/view/admin/lista_conversa_body.html');
+            
         }
 
     }

@@ -16,7 +16,7 @@
     $chamado_id = $_GET['chamado'];
 
     //Query para listar chamado referente ao usuário
-    $query = "select id, titulo, categoria, descricao from chamados where user_id = $user_id and id = $chamado_id";
+    $query = "select id, titulo, categoria, descricao from chamados where id = $chamado_id";
     
     //Realizando o select da query
     $result = $mysqli->query($query);
@@ -33,10 +33,12 @@
             
         }
 
+       
+
     }
     
     //Limpando a query
     mysqli_free_result($result);
 
     //Fechando a conexão
-    $mysqli->close(); 
+    $mysqli->close();

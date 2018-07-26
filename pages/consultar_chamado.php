@@ -20,9 +20,13 @@
         require_once("view/user/consultar_chamado_footer.html");
 
         if(isset($_GET['editado'])){
+            
             echo "<script>alert('Chamado editado com sucesso!');</script>";
+        
         }else if(isset($_GET['finalizado'])){
+            
             echo "<script>alert('Chamado finalizado com sucesso!');</script>";
+
         }
     
     }
