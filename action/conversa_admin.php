@@ -29,11 +29,10 @@
         //Percorrendo os resultados e atribuindo aos campos
         while ($dados = mysqli_fetch_row($result)){
             
+            //Require do header da conversa, que seria as informações do ticket
             require('../pages/view/user/conversa_header.html');
             
         }
-
-       
 
     }
     
