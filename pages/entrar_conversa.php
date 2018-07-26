@@ -10,7 +10,7 @@ if($_SESSION['perfil'] == "admin"){
 
 }else{
     //View do chamado editar header
-    require_once("../action/edicao_chamado.php");
+    require_once("../action/conversa.php");
 }
 
 

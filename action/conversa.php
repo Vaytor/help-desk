@@ -29,7 +29,7 @@
         //Percorrendo os resultados e atribuindo aos campos
         while ($dados = mysqli_fetch_row($result)){
             
-            require('../pages/view/user/editar_chamado.html');
+            require('../pages/view/user/conversa.html');
             
         }
 

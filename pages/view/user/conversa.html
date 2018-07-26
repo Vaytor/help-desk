@@ -4,7 +4,7 @@
       <div class="card-abrir-chamado">
         <div class="card">
           <div class="card-header">
-            Edição do chamado - Nº <? echo $dados[0]; ?>
+            Conversa - Nº <? echo $dados[0]; ?>
           </div>
           <div class="card-body">
             <div class="row">
@@ -24,7 +24,23 @@
                   
                   <div class="form-group">
                     <label>Descrição</label>
-                    <textarea name="descricao" class="form-control" rows="3"><? echo $dados[3]; ?></textarea>
+                    <textarea name="descricao" class="form-control" rows="3" readonly><? echo $dados[3]; ?></textarea>
+                  </div>
+
+                  <div class="card card-default" style="text-align: right">
+                      <div class="card-header">Admin</div>
+                      <div class="card-body">Não conseguimos replicar o problema!</div>
+                  </div>
+
+                  <div class="card card-default" style="margin-top: 10px">
+                      <div class="card-header">Você</div>
+                      <div class="card-body">Vá procurar o que fazer!</div>
+                  </div>
+
+                  <div style="margin-top: 10px">
+                      <div class="input-group">
+                          <textarea rows="5" style="margin-top: 10px;" class="form-control" placeholder="Escreva..." ></textarea>
+                      </div>
                   </div>
 
                   <div class="row mt-5">
@@ -33,7 +49,7 @@
                     </div>
 
                     <div class="col-6">
-                      <button class="btn btn-lg btn-info btn-block" type="submit">Editar</button>
+                      <button class="btn btn-lg btn-info btn-block" type="submit">Responder</button>
                     </div>
                   </div>
                 </form>

@@ -6,7 +6,7 @@ $(document).ready(function(){
             var id = $(this).parents('.chamados').attr('id');
             
             //Enviando via url o id do elemento para editar
-            window.location = "/help-desk/pages/editar_chamado.php?chamado="+id;
+            window.location = "/help-desk/pages/entrar_conversa.php?chamado="+id;
 
     });
 

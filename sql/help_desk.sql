@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 24-Jul-2018 às 03:35
+-- Generation Time: 26-Jul-2018 às 02:56
 -- Versão do servidor: 10.1.33-MariaDB
 -- PHP Version: 7.2.6
 
@@ -69,6 +69,18 @@ INSERT INTO `chamados_finalizados` (`id`, `user_id`, `titulo`, `categoria`, `des
 -- --------------------------------------------------------
 
 --
+-- Estrutura da tabela `conversa`
+--
+
+CREATE TABLE `conversa` (
+  `id` int(11) NOT NULL,
+  `chamado_id` int(11) NOT NULL,
+  `msg` varchar(255) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Estrutura da tabela `usuarios`
 --
 
@@ -102,6 +114,13 @@ ALTER TABLE `chamados`
   ADD KEY `user_id` (`user_id`);
 
 --
+-- Indexes for table `conversa`
+--
+ALTER TABLE `conversa`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `chamado_id` (`chamado_id`);
+
+--
 -- Indexes for table `usuarios`
 --
 ALTER TABLE `usuarios`
@@ -115,13 +134,19 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT for table `chamados`
 --
 ALTER TABLE `chamados`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+
+--
+-- AUTO_INCREMENT for table `conversa`
+--
+ALTER TABLE `conversa`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Constraints for dumped tables
@@ -132,6 +157,12 @@ ALTER TABLE `usuarios`
 --
 ALTER TABLE `chamados`
   ADD CONSTRAINT `chamados_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `usuarios` (`id`);
+
+--
+-- Limitadores para a tabela `conversa`
+--
+ALTER TABLE `conversa`
+  ADD CONSTRAINT `conversa_ibfk_1` FOREIGN KEY (`chamado_id`) REFERENCES `chamados` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
