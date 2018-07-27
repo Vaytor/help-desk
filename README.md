@@ -14,14 +14,14 @@ O sistema irá possui dois tipos de usuários, um comum e um administrador
 * Finalizar chamados V
 * Responder chamados criados X
 * Cadastro de novos usuários V
-* Ao criar um conta enviar um email de verificação para o usuários
+* Ao criar um conta enviar um email de verificação para o usuários X
 
 ** Usuários Administrador **
 
 * Lista de usuários V
-* Lista de todos os chamados X
+* Lista de todos os chamados V
 * Lista de todos os chamados ainda não respondidos X
 * Lista de todos os chamados finalizados X
 * Lista de todos os chamados aguardando retorno do cliente X
-* Finalizar chamados X
-* Responder chamados criados X
+* Finalizar chamados V
+* Responder chamados criados V
