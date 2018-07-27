@@ -23,7 +23,10 @@
     
     //Verificando se ocorreu algum erro
     if(!$result){
+
+        //Mostrado o erro 
         die("Erro: ".$mysqli->error);
+
     }else{
         
         //Percorrendo os resultados e atribuindo aos campos

@@ -9,11 +9,8 @@ if($_SESSION['perfil'] == "admin"){
     //Informações sobre a conversa(nome, titulo... etc)
     require_once("../action/conversa_admin.php");
 
-    //Resposta
-    require("view/admin/conversa_admin.html");
-   
-    //Resposta
-    require("view/user/resposta_user.html");
+    //Respostas
+    require("lista_resposta.php");
 
     //Input para resposter e footer
     require_once("view/user/conversa_footer.html");
@@ -24,10 +21,7 @@ if($_SESSION['perfil'] == "admin"){
     require_once("../action/conversa.php");
 
     //Resposta
-    require("view/admin/conversa_admin.html");
-       
-    //Resposta
-    require("view/user/resposta_user.html");
+    require("lista_resposta.php");
     
     //Input para resposter e footer
     require_once("view/user/conversa_footer.html");
